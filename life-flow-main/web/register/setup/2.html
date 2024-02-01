@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../global/global.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../global/fade/fade.js"></script>
+    <script src="/eel.js"></script>
+
+    <script src="script.js"></script>
+    <title>Life Flow</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="message" class="re fade-in-out">Please Enter Your Last Name</h1>
+          <div class="content">
+    
+            <div class="btnBlock">
+                <input placeholder="type here..."  required type="text" class="use-keyboard-input btn" style="outline: none; ">
+              <input autofocus class="btn re"  type="submit" onclick="save('last_name', '3.html')" class="re" value="Next">
+              <div class="keyboard">
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+                <script src="../../global/keyboard/keyboard.js"></script>
+            </div>
+            </div>
+    
+          </div>
+        <p class="copyright">&copy; 2024 Life Flow. All rights reserved.</p>
+      </div>
+    
+    
+      <script>
+        let canSpeak = true;
+        
+        function speakText(element) {
+          if (canSpeak) {
+            canSpeak = false;
+        
+            const textToSpeak = element.innerText.trim();
+        
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance(textToSpeak);
+              speechSynthesis.speak(utterance);
+            } else {
+              alert('Your browser does not support text-to-speech.');
+            }
+        
+            // Set a cooldown period (e.g., 2 seconds)
+            setTimeout(() => {
+              canSpeak = true;
+            }, 500);
+          }
+        }
+        
+        // Attach event listeners to all elements with the class "re"
+        const readableElements = document.querySelectorAll('.re');
+        readableElements.forEach(element => {
+          element.addEventListener('mouseover', () => speakText(element));
+        });
+          </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+h3 {
+    text-align: center;
+}
+p {
+    text-align: left;
+    font-size: 1.2rem;
+}
+ul {
+    margin-left: 1rem;
+    padding-top: 1rem;
+}
+li {
+    font-size: 1.2rem;
+}
+li::marker {
+    color: var(--dark-logo-color);
+}
+select {
+    background-color: var(--dark-logo-color);
+    width: 250px;
+    height: 35px;
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 0.5pc;
+    color: var(--text-light-color);
+    text-align: center;
+}
+option {
+    background-color: white;
+    color: var(--dark-logo-color);
+    text-align: center;
+}
