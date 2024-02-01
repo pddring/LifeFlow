@@ -1,0 +1,12 @@
+
+/* ===== LANGUAGE LIST ===== */
+
+  #time-display {
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 60px;
+    color: #141414;
+    font-weight: bold;
+  }

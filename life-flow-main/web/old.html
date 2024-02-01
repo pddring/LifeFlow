@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Flow</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="global/fade/fade.css">
+</head>
+
+<body>
+  <!--<div id="time-display" class="re"></div>-->
+
+  <h1 id="message" class="re fade-in-out">Welcome to Life Flow</h1>
+
+  <ul class="languages">
+    <li><a onclick="transitionToPage('accessibilitySettings/index.html')" class="re">English</a></li>
+    <li><a class="re">Español</a></li>
+    <li><a class="re">Français</a></li>
+    <li><a class="re">Norsk</a></li>
+    <li><a class="re">Deutsch</a></li>
+  </ul>
+
+  <p class="copyright">&copy; 2024 Life Flow. All rights reserved.</p>
+
+  <script src="global/rotatingwelcome.js"></script>
+
+  <!-- NARRARATOR -->
+  <script>
+let canSpeak = true;
+
+function speakText(element) {
+  if (canSpeak) {
+    canSpeak = false;
+
+    const textToSpeak = element.innerText.trim();
+
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      speechSynthesis.speak(utterance);
+    } else {
+      alert('Your browser does not support text-to-speech.');
+    }
+
+    // Set a cooldown period (e.g., 2 seconds)
+    setTimeout(() => {
+      canSpeak = true;
+    }, 500);
+  }
+}
+
+// Attach event listeners to all elements with the class "re"
+const readableElements = document.querySelectorAll('.re');
+readableElements.forEach(element => {
+  element.addEventListener('mouseover', () => speakText(element));
+});
+
+  </script>
+
+  <script src="global/fade/fade.js"></script>
+  <script src="global/fade/fadeAnim.js"></script>
+  <script src="global/clock.js"></script>
+</body>
+</html>
