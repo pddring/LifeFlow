@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../global/global.css">
+      
+      <script src="../global/fade/fade.js"></script>
+
+      <link rel="stylesheet" href="style.css">
+      <script type="text/javascript" src="/eel.js"></script>
+      <script type="text/javascript" src="/events.js"></script>
+      <title>Life Flow</title>
+    </head>
+    <body>
+    
+      <!--loading cover-->
+      <!--<div id="loading">
+        <img src="../../assets/logo/large.png">
+        <h3>Loading...</h3>
+      </div>-->
+
+      <div class="wrapper">
+        <h1 id="message" class="re fade-in-out">Setup Complete!</h1>
+          <div class="content">
+            <hr>
+            <br>
+            <p>Thank you for choosing LifeFlow. Your device is now ready!</p>
+            <hr>
+            <div class="btnBlock">
+              <input class="btn re"  type="submit" value="Continue" onclick="complete(); transitionToPage('../home/index.html');">
+            </div>
+          </div>
+        <p class="copyright">&copy; 2024 Life Flow. All rights reserved.</p>
+      </div>
+    
+    
+      <!-- NARRARATOR -->
+      <script>
+        function speakText(element) {
+          if (eel.readData("narrator") == "ON") {
+            const textToSpeak = element.innerText.trim();
+        
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance(textToSpeak);
+              speechSynthesis.speak(utterance);
+            } else {
+             alert('Your browser does not support text-to-speech.');
+            }
+          }
+        }
+        </script>
+        <script src="script.js"></script>
+    </body>
+    </html>
+    

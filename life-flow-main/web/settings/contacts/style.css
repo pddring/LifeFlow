@@ -1,0 +1,6 @@
+h1 {
+    font-size: 1.4rem;
+}
+input::placeholder { /* Most modern browsers support this now. */
+    color:    #909;
+ }
