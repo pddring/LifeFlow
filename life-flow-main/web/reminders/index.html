@@ -21,25 +21,40 @@
       </span>
   </div>
   <div class="wrapper">
-    <br><h1 id="message" class="re fade-in-out">Waiting for a module...</h1>
+    <h1 id="message" class="re fade-in-out">Medication Reminders</h1>
       <div class="content">
         <br>
-        <div class="loader">
-          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-        </div>
-        <p>Please connect a module to monitor your vitals</p>
-        <br>
-        <hr>
-        <br>
+        <table>
+
+          <colgroup>
+            <col span="1" style="width: 15%;">
+            <col span="1" style="width: 80%;">
+            <col span="1" style="width: 5%;">
+         </colgroup>
+
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Name</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:30</td>
+              <td>Tablets</td>
+              <td id="delete">X</td>
+            </tr>
+            <tr>
+              <td>12:30</td>
+              <td>Medicine</td>
+              <td id="delete">X</td>
+            </tr>
+          </tbody>
+        </table>
         <div class="btnBlock">
-          <h4>Temporary UI Examples:</h4>
-          <a href="module/s-heart.html">Heart rate</a>
-          <a href="module/s-oxygen.html">Blood Oxygen levels</a>
-          <a href="module/s-temp.html">Temperature</a>
-          <br>
           <input class="btn re"  type="submit" onclick="transitionToPage('../home/index.html');" value="Done">
         </div>
-
       </div>
     <p class="copyright">&copy; 2024 Life Flow. All rights reserved.</p>
   </div>

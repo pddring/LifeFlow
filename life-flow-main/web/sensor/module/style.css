@@ -1,0 +1,61 @@
+h1 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+hr {
+  border-color: var(--content-color);
+}
+
+
+.sensor-info {
+  color: #fff;
+  font-size: 2rem;
+}
+.sensor-unit {
+  color: #fff;
+}
+
+
+
+
+.wave-container {  
+  height: 200px;
+  width: 100vw;
+  background-color: var(--content-color);
+  z-index: -1;
+  position: relative;
+}
+
+.bar {
+  color: #fff;
+}
+
+.wave-container::before {   
+  content: "";
+  width: 100%;
+  height: 38px;
+  position: absolute;
+  bottom: -0.3%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat no-repeat;
+  background-position: 0vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  83' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 60L50 57C100 53 200 46 300 31C400 16 500 -6 600 1C700 8 800 46 900 60C1000 75 1100 68 1150 64L1200 60V83H1150C1100 83 1000 83 900 83C800 83 700 83 600 83C500 83 400 83 300 83C200 83 100 83 50 83H0V60Z' fill='%23ffffff'/></svg>");
+}
+
+@media(max-width:850px) {
+  .wave-container::before {    
+    height: 19px
+  }  
+}
+
+input[type=submit] {
+  border: 2px solid var(--content-color);
+  color: var(--content-color);
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+}
