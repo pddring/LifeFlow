@@ -1,11 +1,11 @@
 {
-    "completed_setup": "false",
+    "completed_setup": "true",
     "language": "en-GB",
-    "first_name": "",
-    "last_name": "",
-    "age": "",
-    "narrator": "OFF",
-    "high_contrast": "OFF",
+    "first_name": "bob",
+    "last_name": "bob",
+    "age": "21",
+    "narrator": "ON",
+    "high_contrast": "ON",
     "emergency_e_1": "",
     "emergency_e_2": "",
     "emergency_e_3": ""
