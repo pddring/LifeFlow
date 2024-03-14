@@ -1,5 +1,8 @@
 # LifeFlow
 > PA Consulting Raspberry Pi competition entry 2023-2024
+>
+> ![image](https://github.com/pddring/LifeFlow/assets/152720783/ce9933ab-2869-4842-9050-5a06c7cb002a)
+
 
 - [About](#about)
 - [Build Guide](#build-guide)
