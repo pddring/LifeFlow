@@ -1,9 +1,9 @@
 # LifeFlow
 > PA Consulting Raspberry Pi competition entry 2023-2024
 
-- About
-- Build Guide
-- Business Models
+- [About](#about)
+- [Build Guide](#build-guide)
+- [Business Models](#our-business-models)
 
 ## About
 
