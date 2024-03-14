@@ -23,6 +23,13 @@ Finally, the device is enclosed in a custom designed 3D-printed case giving it a
 - [MAX30102 Heart Rate and Pulse Oximetry Sensor](https://www.amazon.co.uk/dp/B09M87934Q?psc=1&smid=AY8YTBRZSL2Q4&ref_=chk_typ_imgToDp)
 - [MLX90614 Non Contact Thermometer](https://www.amazon.co.uk/dp/B07YKNQQ7P?psc=1&smid=A1A7E5ILEFA1R3&ref_=chk_typ_imgToDp)
 
+### Build
+
+- Firstly we formatted an SD card with Raspberry Pi OS then we inserted the SD card and connected the toushcreen via the GPIO pins. We added a [Nano Hat Hacker](https://shop.pimoroni.com/products/pico-hat-hacker?variant=44144542154) to gain access to the used GPIO.
+- We installed the necessary [tools and drivers](https://www.elegoo.com/pages/download) for the [Touchscreen Display](https://www.amazon.co.uk/gp/product/B01MRQTMTD/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1 )
+- We progammed the User Interface with python, html, css and javascript using the [eel library](https://pypi.org/project/Eel/). We then transferred this code to the Pi using GitHub.
+- We soldered some wires onto the emergency button and then connected it to the GPIO pins
+
 ## Our Business Models
 We currently have three business models. The device could be sold to insurance companies, care homes and individual users.
 
