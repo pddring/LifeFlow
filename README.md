@@ -20,10 +20,10 @@ Finally, the device is enclosed in a custom designed 3D-printed case giving it a
 
 ## Build Guide
 ### Parts
-- Raspberry Pi 3 Model B
-- Elegoo Raspberry Pi Touchscreen Display
-- MAX30102 Heart Rate and Pulse Oximetry Sensor
-- MLX90614 Non Contact Thermometer
+- [Raspberry Pi 3 Model B](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/)
+- [Elegoo Raspberry Pi Touchscreen Display](https://www.amazon.co.uk/gp/product/B01MRQTMTD/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1 )
+- [MAX30102 Heart Rate and Pulse Oximetry Sensor](https://www.amazon.co.uk/dp/B09M87934Q?psc=1&smid=AY8YTBRZSL2Q4&ref_=chk_typ_imgToDp)
+- [MLX90614 Non Contact Thermometer](https://www.amazon.co.uk/dp/B07YKNQQ7P?psc=1&smid=A1A7E5ILEFA1R3&ref_=chk_typ_imgToDp)
 
 ## Our Business Models
 We currently have three business models. The device could be sold to insurance companies, care homes and individual users.
