@@ -26,9 +26,3 @@ Finally, the device is enclosed in a custom designed 3D-printed case giving it a
 We currently have three business models. The device could be sold to insurance companies, care homes and individual users.
 
 <img src="https://raw.githubusercontent.com/megacooki/LifeFlow/main/Readme%20Files/Business%20model.png" width="25%">
-
-<a href="https://github.com/pddring/LifeFlow/graphs/contributors">
-  <br>
-  <img src="https://github.com/megacooki/LifeFlow/blob/main/Readme%20Files/contributors.png?raw=true" width=200>
-  <br>
-</a>
