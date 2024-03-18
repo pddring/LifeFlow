@@ -1,21 +1,19 @@
-h1 {
-  font-size: 1.5rem;
-}
+#time-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 60px;
+    color: #141414;
+    font-weight: bold;
+  }
+  #emergency {
+    background-color: rgb(215, 64, 64);
+  }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  text-align: left;
-}
-td, th {
-  border: 2px solid var(--dark-logo-color);
-  padding: 5px;
-}
-th {
-  background-color: var(--dark-logo-color);
-  color: #fff;
-}
-#delete {
-  color: var(--dark-logo-color);
-  border-left: none;
-}
+  .content {
+    text-align: center;
+  }
+  .content p {
+    text-align: left;
+    font-size: 1.1rem;
+  }

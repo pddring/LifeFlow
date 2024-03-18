@@ -22,7 +22,7 @@ def send(emergency_sender_name):
 
     # Create the body of the message (a plain-text and an HTML version).
     text = """\
-        LifeFlow Alert System, Please Enable Email HTML
+        Sorry wrong number
     """
 
     html = """\

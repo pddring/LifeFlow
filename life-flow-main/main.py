@@ -2,10 +2,10 @@ import eel
 import multiprocessing
 import pyautogui
 import lflowalerts
-import gpiod
 import time
 import json
 
+#gpio
 
 def UI():
     @eel.expose
@@ -29,6 +29,12 @@ def UI():
             print("JSON write complete")
 
     @eel.expose
+    def sensor_temp():
+        import Sensor_Temperature as s1
+        print("fetching temperature...")
+        return(s1.take())
+
+    @eel.expose
     def emergency():
         print('Sending emergency alerts...')
         lflowalerts.send(readData("first_name") + " " + readData("last_name"))
@@ -47,23 +53,9 @@ def UI():
 
     eel.init("web")   
     print("yes")
-    eel.start("load-redirect.html")
+    eel.start("load-redirect.html", port=8000)
 
 def GPIO():
-
-        # Define GPIO pin numbers for the buttons
-    button_pins = [17, 27, 22]  # You can change these to the desired GPIO pins for the buttons
-
-    # Define messages for each button
-    button_functions = {
-        17: "home()",
-        27: "emergency()",
-        22: "select()"
-    }
-
-    # Create a GPIO chip and lines for the buttons
-    chip = gpiod.Chip('gpiochip4')
-    button_lines = {pin: chip.get_line(pin) for pin in button_pins}
 
     def home():
         print("Home Button Pressed")
@@ -75,20 +67,9 @@ def GPIO():
     def select():
         print("Select Button Pressed")
 
-    # Request the lines for input
-    for line in button_lines.values():
-        line.request(consumer='button', type=gpiod.LINE_REQ_EV_BOTH_EDGES)
-
-    while True:
-        for pin, line in button_lines.items():
-            value = line.get_value()
-            if value == 1:
-                exec(button_functions[pin])
-                time.sleep(0.3)
-
 multi_UI = multiprocessing.Process(target=UI)
 multi_GPIO = multiprocessing.Process(target=GPIO)
 
 if __name__ == '__main__':
     multi_UI.start()
-    multi_GPIO.start()
+    multi_GPIO.start()   

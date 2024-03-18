@@ -8,7 +8,16 @@
   <link rel="stylesheet" href="global/fade/fade.css">
 </head>
 
-<body>
+              <body>
+
+                <dialog id="popup">
+                  <h1>Medication Reminder</h1>
+                  <hr><br>
+                  <p id="popup-name">12:00 - medicine</p>
+                  <br>
+                  <input class="btn" type="submit" value="Ok" style="width: 210px;" onclick="document.getElementById('popup').close();">
+                </dialog>
+
   <!--<div id="time-display" class="re"></div>-->
 
   <h1 id="message" class="re fade-in-out">Welcome to Life Flow</h1>

@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    cursor: url('cursor.png'), none;
+  }
 
 /* ===== VARIABLES ===== */
 :root {
@@ -202,7 +203,6 @@ hr {
   color: #ffffff;
   font-size: 1.05rem;
   outline: none;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -242,4 +242,18 @@ hr {
 
 .keyboard__key--dark {
   background: rgb(118, 167, 129);
+}
+#popup {
+  align-self: center;
+  text-align: center;
+  outline: none;
+  margin: 0 auto;
+  padding: 1.3pc;
+  border-radius: 0.3pc;
+  background-color: #fff;
+  color: var(--dark-logo-color);
+  border: 2px solid var(--dark-logo-color);
+}
+#popup h1 {
+  color: var(--dark-logo-color);
 }

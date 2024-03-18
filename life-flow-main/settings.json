@@ -1,12 +1,16 @@
 {
     "completed_setup": "true",
     "language": "en-GB",
-    "first_name": "bob",
-    "last_name": "bob",
-    "age": "21",
-    "narrator": "ON",
-    "high_contrast": "ON",
+    "first_name": "h",
+    "last_name": "ghjkrdvhnn",
+    "age": "",
+    "narrator": "OFF",
+    "high_contrast": "OFF",
     "emergency_e_1": "",
-    "emergency_e_2": "",
-    "emergency_e_3": ""
+    "emergency_e_2": "b",
+    "emergency_e_3": "t",
+    "reminder_slot_1": "",
+    "reminder_slot_2": "",
+    "reminder_slot_1_time": "",
+    "reminder_slot_2_time": ""
 }

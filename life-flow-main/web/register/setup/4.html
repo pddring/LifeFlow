@@ -13,7 +13,16 @@
     <script src="script.js"></script>
     <title>Life Flow</title>
 </head>
-<body>
+              <body>
+
+                <dialog id="popup">
+                  <h1>Medication Reminder</h1>
+                  <hr><br>
+                  <p id="popup-name">12:00 - medicine</p>
+                  <br>
+                  <input class="btn" type="submit" value="Ok" style="width: 210px;" onclick="document.getElementById('popup').close();">
+                </dialog>
+
     <div class="wrapper">
         <h1 id="message" class="re fade-in-out">Please Enter Your First Emergency Contact Email</h1>
           <div class="content">
