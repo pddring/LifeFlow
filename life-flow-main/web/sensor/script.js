@@ -22,4 +22,6 @@ function check() {
   run();
 }
 
-setInterval(check(), 3000);
+setTimeout(()=> {
+  setInterval(check(), 3000);
+}, 3000);
