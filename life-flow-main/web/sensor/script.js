@@ -9,3 +9,18 @@ function temperature() {
     }
    run();
 }
+
+function check() {
+  async function run() {
+    let n = await eel.check()();
+    console.log(n);
+    if (n="0x5A") {
+      transitionToPage('module/s-temp.html');
+    }
+  }
+
+  run();
+}
+
+setInterval(check(), 2000);
+check();

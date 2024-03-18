@@ -4,6 +4,11 @@ import adafruit_mlx90614
 
 from time import sleep
 
+def check():
+    i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
+    adress = [hex(x) for x in i2c.scan()]
+    return(adress)
+
 def take():
     i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
     mlx = adafruit_mlx90614.MLX90614(i2c)
