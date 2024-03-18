@@ -22,6 +22,5 @@ function check() {
   run();
 }
 
-setTimeout(()=> {
-  setInterval(check(), 3000);
-}, 3000);
+// the triger for check function is on the index.html file on the waiting page
+
