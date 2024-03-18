@@ -33,6 +33,11 @@ def UI():
         import Sensor_Temperature as s1
         print("fetching temperature...")
         return(s1.take())
+    
+    def check_I2C():
+        import Sensor_Temperature as s1
+        print("I2C checking...")
+        return(s1.check())
 
     @eel.expose
     def emergency():
