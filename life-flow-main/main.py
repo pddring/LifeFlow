@@ -34,6 +34,7 @@ def UI():
         print("fetching temperature...")
         return(s1.take())
     
+    @eel.expose
     def check_I2C():
         import Sensor_Temperature as s1
         print("I2C checking...")
