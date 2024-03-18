@@ -22,5 +22,4 @@ function check() {
   run();
 }
 
-setInterval(check(), 2000);
-check();
+setInterval(check(), 3000);
