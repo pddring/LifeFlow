@@ -26,9 +26,19 @@ Finally, the device is enclosed in a custom designed 3D-printed case giving it a
 ### Build
 
 - Firstly we formatted an SD card with Raspberry Pi OS then we inserted the SD card and connected the toushcreen via the GPIO pins. We added a [Nano Hat Hacker](https://shop.pimoroni.com/products/pico-hat-hacker?variant=44144542154) to gain access to the used GPIO.
-- We installed the necessary [tools and drivers](https://www.elegoo.com/pages/download) for the [Touchscreen Display](https://www.amazon.co.uk/gp/product/B01MRQTMTD/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1 )
+- We installed the necessary [tools and drivers](https://www.elegoo.com/pages/download) for the [Touchscreen Display](https://www.amazon.co.uk/gp/product/B01MRQTMTD/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1 ) following the instructions [here](https://www.waveshare.com/wiki/3.5inch_RPi_LCD_(A))
 - We progammed the User Interface with python, html, css and javascript using the [eel library](https://pypi.org/project/Eel/). We then transferred this code to the Pi using GitHub.
-- We soldered some wires onto the emergency button and then connected it to the GPIO pins
+- We soldered some wires onto the emergency button and then connected it to the GPIO pins as shown below
+- ![image](https://github.com/pddring/LifeFlow/assets/760604/e4cf8fa8-178e-49b6-8a24-e1caf0372b75)
+- For our prototype we have got the infrared temperature working so far:
+- Connect each pin as shown below:
+-- Vin on the temperature sensor to 3v on the Pi (physical pin 1) 
+-- Gnd on the temperature sensor to Gnd on the Pi (physical pin 9)
+-- SCL (I2C clock) on the temperature sensor to SCL on the Pi (Physical pin 5 / GPIO3)
+-- SDA (I2C data) on the temperature sensor to SDA on the Pi (Physical pin 3 / GPIO2)
+
+  
+
 
 ## Our Business Models
 We currently have three business models. The device could be sold to insurance companies, care homes and individual users.
