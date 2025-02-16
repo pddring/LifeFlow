@@ -9,7 +9,11 @@
     --dark: #131217;
     --text: #fff;
     --subtext: #B5B4BD;
+
     --blue: #1483FE;
+    --green: #46C392;
+    --red: #E14849;
+    --pink: #E1184D;
 
     font-family: "Roboto", sans-serif;
     color: #fff;
@@ -90,14 +94,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 30px;
     width: calc(100vw - 250px);
     color: var(--subtext);
 }
 
 .left {
-    font-size: 23px;
-    font-weight: normal;
+    font-size: 25px;
+    font-weight: 300;
     color: var(--subtext);
 }
 
@@ -147,4 +151,71 @@ body {
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
+}
+.content {
+    position: fixed;
+    padding: 0 16px;
+    top: 82px;
+    left: 250px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.leftcont {
+    padding: 16px;
+}
+.rightcont {
+    padding: 16px;
+}
+
+
+.card {
+    display: flex;
+    grid-template-columns: 1fr 3fr;
+    border-radius: 20px;
+    background-color: var(--dark);
+    margin-bottom: 16px;
+}
+.pic {
+    display: flex;
+    border-radius: 9px;
+    margin: 14px;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: var(--light);
+}
+.pic .material-symbols-rounded {
+    font-size: 40px !important;
+    color: var(--text);
+}
+.text {
+    padding: 14px 0;
+}
+.sub {
+    font-size: 12px;
+    font-weight: 600;
+}
+.main {
+    font-size: 33px;
+    font-weight: 300;
+}
+.blue {
+    background-color: var(--blue) !important;
+}
+.red {
+    background-color: var(--red)!important;
+}
+.green {
+    background-color: var(--green)!important;
+}
+.pink {
+    background-color: var(--pink)!important;
+}
+.card-title {
+    font-size: 30px;
+    padding: 16px 0;
+    font-weight: 300;
 }
