@@ -101,7 +101,7 @@ body {
 
 .left {
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 4 00;
     color: var(--subtext);
 }
 
@@ -164,9 +164,11 @@ body {
 }
 .leftcont {
     padding: 16px;
+    padding-top: 0;
 }
 .rightcont {
     padding: 16px;
+    padding-top: 0;
 }
 
 
@@ -216,6 +218,9 @@ body {
 }
 .card-title {
     font-size: 30px;
-    padding: 16px 0;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    height: 83px;
+    margin-bottom: 14px;
 }
