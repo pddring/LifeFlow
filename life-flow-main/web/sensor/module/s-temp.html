@@ -7,6 +7,7 @@
     <script src="../script.js"></script>
 
   <script src="../../global/fade/fade.js"></script>
+  <script src="fakereadings.js"></script>
 
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="/eel.js"></script>
@@ -38,14 +39,14 @@
         <div class="loader">
           <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </div>
-        <p class="sensor-info" id="sensordata">--</p>
+        <p class="sensor-info" id="reading-container">--</p>
         <p class="sensor-unit">Temperature °C</p>
         <br>
         <br>
         <hr>
         <br>
         <div class="btnBlock">
-          <input class="btn re"  type="button" onclick="temperature();" value="Take Reading">
+          <input class="btn re"  type="button" onclick="temperature();" value="Take Reading" id="take-reading-btn">
           <input class="btn re"  type="submit" onclick="transitionToPage('../../home/index.html');" value="Done">
         </div>
 

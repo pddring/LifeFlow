@@ -22,5 +22,26 @@ function check() {
   run();
 }
 
+setTimeout(() => {
+  const randomNumber = Math.floor(Math.random() * 3) + 1;
+  let redirectUrl = '';
+
+  switch (randomNumber) {
+      case 1:
+          redirectUrl = 'module/s-heart.html';
+          break;
+      case 2:
+          redirectUrl = 'module/s-oxygen.html';
+          break;
+      case 3:
+          redirectUrl = 'module/s-temp.html';
+          break;
+  }
+
+  window.location.href = redirectUrl;
+}, 5000);
+
+
+
 // the triger for check function is on the index.html file on the waiting page
 
