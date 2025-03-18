@@ -1,6 +1,6 @@
 # <img src="https://github.com/pddring/LifeFlow/assets/152720783/899cfe60-e323-4a9e-888c-b15697a5152e" width="25%">
 
-> PA Consulting Raspberry Pi competition entry 2023-2024
+> PA Consulting Raspberry Pi competition entry 2023-2025
 
 - [About](#about)
 - [Build Guide](#build-guide)
