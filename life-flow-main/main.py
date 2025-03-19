@@ -4,6 +4,8 @@ import pyautogui
 import lflowalerts
 import time
 import json
+import requests
+
 
 #gpio
 
@@ -43,7 +45,30 @@ def UI():
     @eel.expose
     def emergency():
         print('Sending emergency alerts...')
-        lflowalerts.send(readData("first_name") + " " + readData("last_name"))
+        #lflowalerts.send(readData("first_name") + " " + readData("last_name"))
+
+        # Send Request to Incidents API
+        # Load the JSON file to retrieve the ID
+        with open('settings.json', 'r') as file:
+            data = json.load(file)
+
+        # Retrieve the 'hub' value from the JSON
+        hub_id = data['hub']  # Assuming 'hub' contains the hub ID value
+
+        # Construct the URL with the retrieved hub_id
+        url = f"http://lifeflow.local/api/hub_alert.php?hub_id={hub_id}"
+
+        # Send a GET request to the constructed URL
+        try:
+            response = requests.get(url)
+            
+            if response.status_code == 200:
+                print("Request successful")
+            else:
+                print(f"Request failed with status: {response.status_code}")
+        except requests.exceptions.RequestException as e:
+            print(f"Error with the request: {e}")
+
 
     @eel.expose
     def fullscreen():

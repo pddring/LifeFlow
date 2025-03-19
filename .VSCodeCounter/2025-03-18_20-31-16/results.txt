@@ -1,0 +1,293 @@
+Date : 2025-03-18 20:31:16
+Directory : c:\Users\LWSte\Documents\GitHub\LifeFlowDring
+Total : 193 files,  9367 codes, 607 comments, 2116 blanks, all 12090 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| HTML               |         66 |      4,128 |        218 |        814 |      5,160 |
+| Python             |         28 |      2,117 |        277 |        664 |      3,058 |
+| CSS                |         33 |      1,308 |         13 |        135 |      1,456 |
+| JavaScript         |         40 |        913 |         53 |        246 |      1,212 |
+| PHP                |         10 |        630 |         45 |        223 |        898 |
+| XML                |          1 |        154 |          1 |          2 |        157 |
+| Markdown           |          3 |         75 |          0 |         30 |        105 |
+| JSON with Comments |          2 |         28 |          0 |          0 |         28 |
+| JSON               |         10 |         14 |          0 |          2 |         16 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                      | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                         |        193 |      9,367 |        607 |      2,116 |     12,090 |
+| . (Files)                                                                                                 |          1 |         49 |          0 |         16 |         65 |
+| Interface                                                                                                 |          1 |         18 |          6 |          8 |         32 |
+| life-flow-badge                                                                                           |         26 |      1,633 |        218 |        528 |      2,379 |
+| life-flow-badge (Files)                                                                                   |          5 |        323 |         31 |        100 |        454 |
+| life-flow-badge\examples                                                                                  |         13 |      1,302 |        187 |        428 |      1,917 |
+| life-flow-badge\state                                                                                     |          8 |          8 |          0 |          0 |          8 |
+| life-flow-main                                                                                            |        150 |      6,073 |        300 |      1,173 |      7,546 |
+| life-flow-main (Files)                                                                                    |          7 |        225 |         12 |         61 |        298 |
+| life-flow-main\GPIO                                                                                       |          1 |         60 |         13 |         18 |         91 |
+| life-flow-main\backup                                                                                     |         72 |      2,749 |        147 |        511 |      3,407 |
+| life-flow-main\backup (Files)                                                                             |          6 |        189 |         15 |         47 |        251 |
+| life-flow-main\backup\GPIO                                                                                |          1 |         60 |         13 |         18 |         91 |
+| life-flow-main\backup\web                                                                                 |         65 |      2,500 |        119 |        446 |      3,065 |
+| life-flow-main\backup\web (Files)                                                                         |          6 |        150 |          3 |         40 |        193 |
+| life-flow-main\backup\web\about                                                                           |          3 |         69 |          1 |          7 |         77 |
+| life-flow-main\backup\web\emergency                                                                       |          5 |        129 |          2 |         13 |        144 |
+| life-flow-main\backup\web\global                                                                          |          5 |        449 |         18 |         81 |        548 |
+| life-flow-main\backup\web\global (Files)                                                                  |          3 |        244 |          9 |         31 |        284 |
+| life-flow-main\backup\web\global\fade                                                                     |          1 |         11 |          0 |          2 |         13 |
+| life-flow-main\backup\web\global\keyboard                                                                 |          1 |        194 |          9 |         48 |        251 |
+| life-flow-main\backup\web\home                                                                            |          3 |         60 |          1 |         12 |         73 |
+| life-flow-main\backup\web\register                                                                        |         12 |        500 |         14 |         90 |        604 |
+| life-flow-main\backup\web\register (Files)                                                                |          4 |        151 |         13 |         22 |        186 |
+| life-flow-main\backup\web\register\setup                                                                  |          8 |        349 |          1 |         68 |        418 |
+| life-flow-main\backup\web\reminders                                                                       |          3 |         92 |          1 |          9 |        102 |
+| life-flow-main\backup\web\sensor                                                                          |          7 |        364 |          4 |         51 |        419 |
+| life-flow-main\backup\web\sensor (Files)                                                                  |          3 |        126 |          1 |         12 |        139 |
+| life-flow-main\backup\web\sensor\module                                                                   |          4 |        238 |          3 |         39 |        280 |
+| life-flow-main\backup\web\settings                                                                        |         21 |        687 |         75 |        143 |        905 |
+| life-flow-main\backup\web\settings (Files)                                                                |          3 |         76 |          8 |         19 |        103 |
+| life-flow-main\backup\web\settings\accessibility                                                          |          3 |         75 |          8 |         22 |        105 |
+| life-flow-main\backup\web\settings\contacts                                                               |          6 |        230 |         25 |         40 |        295 |
+| life-flow-main\backup\web\settings\general                                                                |          3 |         78 |          8 |         22 |        108 |
+| life-flow-main\backup\web\settings\info                                                                   |          6 |        228 |         26 |         40 |        294 |
+| life-flow-main\web                                                                                        |         70 |      3,039 |        128 |        583 |      3,750 |
+| life-flow-main\web (Files)                                                                                |          6 |        170 |          3 |         45 |        218 |
+| life-flow-main\web\about                                                                                  |          3 |         75 |          1 |         14 |         90 |
+| life-flow-main\web\emergency                                                                              |          5 |        143 |          2 |         17 |        162 |
+| life-flow-main\web\global                                                                                 |          5 |        490 |         18 |         89 |        597 |
+| life-flow-main\web\global (Files)                                                                         |          3 |        285 |          9 |         39 |        333 |
+| life-flow-main\web\global\fade                                                                            |          1 |         11 |          0 |          2 |         13 |
+| life-flow-main\web\global\keyboard                                                                        |          1 |        194 |          9 |         48 |        251 |
+| life-flow-main\web\home                                                                                   |          3 |         67 |          1 |         14 |         82 |
+| life-flow-main\web\register                                                                               |         12 |        556 |         14 |        106 |        676 |
+| life-flow-main\web\register (Files)                                                                       |          4 |        165 |         13 |         26 |        204 |
+| life-flow-main\web\register\setup                                                                         |          8 |        391 |          1 |         80 |        472 |
+| life-flow-main\web\reminders                                                                              |          7 |        338 |          3 |         65 |        406 |
+| life-flow-main\web\reminders (Files)                                                                      |          3 |        140 |          1 |         23 |        164 |
+| life-flow-main\web\reminders\sub                                                                          |          4 |        198 |          2 |         42 |        242 |
+| life-flow-main\web\sensor                                                                                 |          8 |        436 |         11 |         68 |        515 |
+| life-flow-main\web\sensor (Files)                                                                         |          3 |        161 |          2 |         23 |        186 |
+| life-flow-main\web\sensor\module                                                                          |          5 |        275 |          9 |         45 |        329 |
+| life-flow-main\web\settings                                                                               |         21 |        764 |         75 |        165 |      1,004 |
+| life-flow-main\web\settings (Files)                                                                       |          3 |         83 |          8 |         21 |        112 |
+| life-flow-main\web\settings\accessibility                                                                 |          3 |         82 |          8 |         24 |        114 |
+| life-flow-main\web\settings\contacts                                                                      |          6 |        258 |         25 |         48 |        331 |
+| life-flow-main\web\settings\general                                                                       |          3 |         85 |          8 |         24 |        117 |
+| life-flow-main\web\settings\info                                                                          |          6 |        256 |         26 |         48 |        330 |
+| life-flow-staff-portal                                                                                    |         15 |      1,594 |         83 |        391 |      2,068 |
+| life-flow-staff-portal (Files)                                                                            |          7 |        833 |         46 |        185 |      1,064 |
+| life-flow-staff-portal\apache                                                                             |          1 |        279 |         18 |         72 |        369 |
+| life-flow-staff-portal\badges                                                                             |          1 |         70 |          4 |         30 |        104 |
+| life-flow-staff-portal\hubs                                                                               |          1 |         70 |          4 |         30 |        104 |
+| life-flow-staff-portal\images                                                                             |          1 |        154 |          1 |          2 |        157 |
+| life-flow-staff-portal\incidents                                                                          |          3 |        117 |          5 |         41 |        163 |
+| life-flow-staff-portal\incidents (Files)                                                                  |          1 |         74 |          5 |         34 |        113 |
+| life-flow-staff-portal\incidents\create                                                                   |          2 |         43 |          0 |          7 |         50 |
+| life-flow-staff-portal\residents                                                                          |          1 |         71 |          5 |         31 |        107 |
++-----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                  | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\Interface\main.py                                           | Python             |         18 |          6 |          8 |         32 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\README.md                                                   | Markdown           |         49 |          0 |         16 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\WIFI_CONFIG.py                              | Python             |          4 |          0 |          1 |          5 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\accelerometer.py                            | Python             |         30 |          8 |         12 |         50 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\badge.py                           | Python             |         98 |         33 |         39 |        170 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\clock.py                           | Python             |        163 |          3 |         58 |        224 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\ebook.py                           | Python             |        159 |         40 |         50 |        249 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\emergency.py                       | Python             |         60 |          5 |         26 |         91 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\fonts.py                           | Python             |         86 |         18 |         31 |        135 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\help.py                            | Python             |         30 |          3 |         10 |         43 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\image.py                           | Python             |         70 |          5 |         28 |        103 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\info.py                            | Python             |         32 |          3 |         11 |         46 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\list.py                            | Python             |        220 |         37 |         60 |        317 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\net_info.py                        | Python             |         35 |          5 |         10 |         50 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\news.py                            | Python             |        155 |         12 |         48 |        215 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\qrgen.py                           | Python             |        124 |          8 |         34 |        166 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\examples\weather.py                         | Python             |         70 |         15 |         23 |        108 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\launcher.py                                 | Python             |        144 |          5 |         43 |        192 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\main.py                                     | Python             |          1 |          1 |          0 |          2 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\ebook.json                            | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\fall_detection.json                   | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\fonts.json                            | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\image.json                            | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\launcher.json                         | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\list.json                             | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\news.json                             | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\state\qrcodes.json                          | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-badge\test.py                                     | Python             |        144 |         17 |         44 |        205 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\GPIO\gpio.py                                 | Python             |         60 |         13 |         18 |         91 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\README.md                                    | Markdown           |         24 |          0 |         12 |         36 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\Sensor_Temperature.py                        | Python             |         17 |          0 |          7 |         24 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\GPIO\gpio.py                          | Python             |         60 |         13 |         18 |         91 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\README.md                             | Markdown           |          2 |          0 |          2 |          4 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\key.json                              | JSON               |          3 |          0 |          1 |          4 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\lflowalerts.py                        | Python             |         67 |          7 |         14 |         88 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\main.py                               | Python             |         68 |          6 |         20 |         94 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\settings.json                         | JSON with Comments |         12 |          0 |          0 |         12 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\about\index.html                  | HTML               |         49 |          1 |          5 |         55 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\about\script.js                   | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\about\style.css                   | CSS                |         20 |          0 |          1 |         21 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\emergency\countdown.js            | JavaScript         |         10 |          0 |          1 |         11 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\emergency\emergency.html          | HTML               |         46 |          1 |          6 |         53 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\emergency\index.html              | HTML               |         49 |          1 |          6 |         56 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\emergency\script.js               | JavaScript         |          2 |          0 |          0 |          2 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\emergency\style.css               | CSS                |         22 |          0 |          0 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\events.js                         | JavaScript         |          8 |          0 |          2 |         10 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\global\clock.js                   | JavaScript         |         10 |          3 |          3 |         16 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\global\fade\fade.js               | JavaScript         |         11 |          0 |          2 |         13 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\global\global.css                 | CSS                |        215 |          5 |         25 |        245 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\global\keyboard\keyboard.js       | JavaScript         |        194 |          9 |         48 |        251 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\global\rotatingwelcome.js         | JavaScript         |         19 |          1 |          3 |         23 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\home\index.html                   | HTML               |         49 |          1 |         11 |         61 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\home\script.js                    | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\home\style.css                    | CSS                |         11 |          0 |          0 |         11 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\index.html                        | HTML               |         56 |          0 |         16 |         72 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\load-redirect.html                | HTML               |         28 |          0 |          5 |         33 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\old.html                          | HTML               |         49 |          2 |         14 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\final.html               | HTML               |         42 |          6 |          8 |         56 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\index.html               | HTML               |         55 |          6 |          9 |         70 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\script.js                | JavaScript         |         16 |          1 |          5 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\1.html             | HTML               |         54 |          0 |         11 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\2.html             | HTML               |         54 |          0 |         11 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\3.html             | HTML               |         54 |          0 |         11 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\4.html             | HTML               |         54 |          0 |         11 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\5.html             | HTML               |         55 |          0 |         11 |         66 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\6.html             | HTML               |         55 |          0 |         11 |         66 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\script.js          | JavaScript         |          7 |          1 |          1 |          9 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\setup\style.css          | CSS                |         16 |          0 |          1 |         17 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\register\style.css                | CSS                |         38 |          0 |          0 |         38 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\reminders\index.html              | HTML               |         72 |          1 |          7 |         80 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\reminders\script.js               | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\reminders\style.css               | CSS                |         20 |          0 |          1 |         21 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\script.js                         | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\sensor\index.html                 | HTML               |         58 |          1 |          6 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\sensor\module\s-heart.html        | HTML               |         63 |          1 |          9 |         73 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\sensor\module\s-oxygen.html       | HTML               |         63 |          1 |          9 |         73 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\sensor\module\s-temp.html         | HTML               |         63 |          1 |          9 |         73 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\sensor\module\style.css           | CSS                |         49 |          0 |         12 |         61 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\sensor\script.js                  | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\sensor\style.css                  | CSS                |         68 |          0 |          5 |         73 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\accessibility\index.html | HTML               |         47 |          6 |         12 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\accessibility\script.js  | JavaScript         |         28 |          2 |          9 |         39 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\accessibility\style.css  | CSS                |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\contacts\1.html          | HTML               |         51 |          6 |          8 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\contacts\2.html          | HTML               |         51 |          6 |          8 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\contacts\3.html          | HTML               |         51 |          6 |          8 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\contacts\index.html      | HTML               |         56 |          6 |         10 |         72 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\contacts\script.js       | JavaScript         |         15 |          1 |          6 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\contacts\style.css       | CSS                |          6 |          0 |          0 |          6 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\general\index.html       | HTML               |         46 |          6 |         11 |         63 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\general\script.js        | JavaScript         |         32 |          2 |         10 |         44 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\general\style.css        | CSS                |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\index.html               | HTML               |         49 |          6 |         11 |         66 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\info\1.html              | HTML               |         51 |          6 |          8 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\info\2.html              | HTML               |         51 |          6 |          8 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\info\3.html              | HTML               |         51 |          6 |          8 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\info\index.html          | HTML               |         56 |          7 |         11 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\info\script.js           | JavaScript         |         16 |          1 |          5 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\info\style.css           | CSS                |          3 |          0 |          0 |          3 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\script.js                | JavaScript         |         27 |          2 |          7 |         36 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\settings\style.css                | CSS                |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\web\style.css                         | CSS                |          9 |          1 |          2 |         12 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\backup\windows_no_gpio.py                    | Python             |         37 |          2 |         10 |         49 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\key.json                                     | JSON               |          3 |          0 |          1 |          4 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\lflowalerts.py                               | Python             |         67 |          7 |         14 |         88 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\main.py                                      | Python             |         61 |          3 |         17 |         81 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\settings.json                                | JSON with Comments |         16 |          0 |          0 |         16 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\about\index.html                         | HTML               |         57 |          1 |         12 |         70 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\about\script.js                          | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\about\style.css                          | CSS                |         18 |          0 |          1 |         19 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\emergency\countdown.js                   | JavaScript         |         10 |          0 |          1 |         11 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\emergency\emergency.html                 | HTML               |         53 |          1 |          8 |         62 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\emergency\index.html                     | HTML               |         56 |          1 |          8 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\emergency\script.js                      | JavaScript         |          2 |          0 |          0 |          2 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\emergency\style.css                      | CSS                |         22 |          0 |          0 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\events.js                                | JavaScript         |          7 |          0 |          1 |          8 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\global\clock.js                          | JavaScript         |         37 |          3 |         11 |         51 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\global\fade\fade.js                      | JavaScript         |         11 |          0 |          2 |         13 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\global\global.css                        | CSS                |        229 |          5 |         25 |        259 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\global\keyboard\keyboard.js              | JavaScript         |        194 |          9 |         48 |        251 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\global\rotatingwelcome.js                | JavaScript         |         19 |          1 |          3 |         23 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\home\index.html                          | HTML               |         56 |          1 |         13 |         70 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\home\script.js                           | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\home\style.css                           | CSS                |         11 |          0 |          0 |         11 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\index.html                               | HTML               |         63 |          0 |         18 |         81 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\load-redirect.html                       | HTML               |         35 |          0 |          7 |         42 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\old.html                                 | HTML               |         56 |          2 |         16 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\final.html                      | HTML               |         49 |          6 |         10 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\index.html                      | HTML               |         62 |          6 |         11 |         79 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\script.js                       | JavaScript         |         16 |          1 |          5 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\1.html                    | HTML               |         61 |          0 |         13 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\2.html                    | HTML               |         61 |          0 |         13 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\3.html                    | HTML               |         61 |          0 |         13 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\4.html                    | HTML               |         61 |          0 |         13 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\5.html                    | HTML               |         62 |          0 |         13 |         75 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\6.html                    | HTML               |         62 |          0 |         13 |         75 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\script.js                 | JavaScript         |          7 |          1 |          1 |          9 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\setup\style.css                 | CSS                |         16 |          0 |          1 |         17 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\register\style.css                       | CSS                |         38 |          0 |          0 |         38 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\reminders\index.html                     | HTML               |         68 |          1 |         12 |         81 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\reminders\script.js                      | JavaScript         |         17 |          0 |          4 |         21 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\reminders\style.css                      | CSS                |         55 |          0 |          7 |         62 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\reminders\sub\add1.html                  | HTML               |         66 |          1 |         15 |         82 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\reminders\sub\add2.html                  | HTML               |         66 |          1 |         15 |         82 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\reminders\sub\script.js                  | JavaScript         |         11 |          0 |          5 |         16 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\reminders\sub\style.css                  | CSS                |         55 |          0 |          7 |         62 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\script.js                                | JavaScript         |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\index.html                        | HTML               |         58 |          1 |          6 |         65 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\module\fakereadings.js            | JavaScript         |         34 |          6 |          6 |         46 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\module\s-heart.html               | HTML               |         64 |          1 |          9 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\module\s-oxygen.html              | HTML               |         64 |          1 |          9 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\module\s-temp.html                | HTML               |         64 |          1 |          9 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\module\style.css                  | CSS                |         49 |          0 |         12 |         61 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\script.js                         | JavaScript         |         35 |          1 |         12 |         48 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\sensor\style.css                         | CSS                |         68 |          0 |          5 |         73 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\accessibility\index.html        | HTML               |         54 |          6 |         14 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\accessibility\script.js         | JavaScript         |         28 |          2 |          9 |         39 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\accessibility\style.css         | CSS                |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\contacts\1.html                 | HTML               |         58 |          6 |         10 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\contacts\2.html                 | HTML               |         58 |          6 |         10 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\contacts\3.html                 | HTML               |         58 |          6 |         10 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\contacts\index.html             | HTML               |         63 |          6 |         12 |         81 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\contacts\script.js              | JavaScript         |         15 |          1 |          6 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\contacts\style.css              | CSS                |          6 |          0 |          0 |          6 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\general\index.html              | HTML               |         53 |          6 |         13 |         72 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\general\script.js               | JavaScript         |         32 |          2 |         10 |         44 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\general\style.css               | CSS                |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\index.html                      | HTML               |         56 |          6 |         13 |         75 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\info\1.html                     | HTML               |         58 |          6 |         10 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\info\2.html                     | HTML               |         58 |          6 |         10 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\info\3.html                     | HTML               |         58 |          6 |         10 |         74 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\info\index.html                 | HTML               |         63 |          7 |         13 |         83 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\info\script.js                  | JavaScript         |         16 |          1 |          5 |         22 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\info\style.css                  | CSS                |          3 |          0 |          0 |          3 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\script.js                       | JavaScript         |         27 |          2 |          7 |         36 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\settings\style.css                       | CSS                |          0 |          0 |          1 |          1 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\web\style.css                                | CSS                |          9 |          1 |          2 |         12 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-main\windows_no_gpio.py                           | Python             |         37 |          2 |         10 |         49 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\apache\index.html                    | HTML               |        279 |         18 |         72 |        369 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\badges\index.php                     | PHP                |         70 |          4 |         30 |        104 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\checkUnreadIncidents.php             | PHP                |         15 |          4 |          4 |         23 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\form.css                             | CSS                |         30 |          0 |          0 |         30 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\global.css                           | CSS                |        222 |          1 |         22 |        245 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\hubs\index.php                       | PHP                |         70 |          4 |         30 |        104 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\images\lifeflow.svg                  | XML                |        154 |          1 |          2 |        157 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\incidents\create\index.php           | PHP                |         31 |          0 |          5 |         36 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\incidents\create\process.php         | PHP                |         12 |          0 |          2 |         14 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\incidents\index.php                  | PHP                |         74 |          5 |         34 |        113 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\index.html                           | HTML               |        279 |         18 |         72 |        369 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\index.php                            | PHP                |        154 |          5 |         50 |        209 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\nav.php                              | PHP                |        117 |         13 |         32 |        162 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\residents\index.php                  | PHP                |         71 |          5 |         31 |        107 |
+| c:\Users\LWSte\Documents\GitHub\LifeFlowDring\life-flow-staff-portal\updateReadStatus.php                 | PHP                |         16 |          5 |          5 |         26 |
+| Total                                                                                                     |                    |      9,367 |        607 |      2,116 |     12,090 |
++-----------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

@@ -26,6 +26,8 @@ setTimeout(() => {
   const randomNumber = Math.floor(Math.random() * 3) + 1;
   let redirectUrl = '';
 
+
+
   switch (randomNumber) {
       case 1:
           redirectUrl = 'module/s-heart.html';

@@ -1,3 +1,12 @@
+//eel error, modules were working but for now generate random values for the sensor data
+//
+//
+//
+//
+//
+//
+// =============================
+
 // Function to generate random values within a range
 function getRandomValue(min, max, decimals = 0) {
     let value = Math.random() * (max - min) + min;
@@ -27,7 +36,7 @@ function updateReading() {
 
 // Auto-update every 0.5 seconds for heart rate and oxygen
 if (readingRanges[page]?.autoUpdate) {
-    setInterval(updateReading, 500);
+    setInterval(updateReading, 2000);
 }
 
 // For temperature: Start updating only after button is clicked
@@ -37,8 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (button) {
             button.addEventListener("click", () => {
                 updateReading(); // First update immediately
-                setInterval(updateReading, 500); // Then start updating every 0.5 sec
-                button.disabled = true; // Disable button after first click
+                updateReading();
             });
         }
     }
