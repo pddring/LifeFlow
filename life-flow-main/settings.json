@@ -1,9 +1,11 @@
 {
     "completed_setup": "true",
     "language": "en-GB",
-    "first_name": "h",
-    "last_name": "ghjkrdvhnn",
-    "age": "",
+    "first_name": "Patricia",
+    "last_name": "Satchel",
+    "age": "95",
+    "gender": "Female",
+    "hub": "1",
     "narrator": "OFF",
     "high_contrast": "OFF",
     "emergency_e_1": "",
@@ -12,6 +14,5 @@
     "reminder_slot_1": "",
     "reminder_slot_2": "",
     "reminder_slot_1_time": "",
-    "reminder_slot_2_time": "",
-    "hub": "1"
+    "reminder_slot_2_time": ""
 }
