@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
             </div>
 
             <div class="card-title">
-                <p>LifeFlow Hubs</p>
+                <p>LifeFlow Hubs</p><a class="material-symbols-rounded action" href="create">add</a>
             </div>
 
             <?php
@@ -56,7 +56,7 @@ if ($conn->connect_error) {
 }
 
 // Query to fetch resident data with a join
-$sql = "SELECT h.id, h.room, h.patient_id, r.name 
+$sql = "SELECT h.id, h.room, h.patient_id, r.first_name, r.last_name 
         FROM lifeflow_hubs h
         LEFT JOIN lifeflow_residents r ON h.patient_id = r.id"; 
 
@@ -66,14 +66,19 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Loop through the results and generate cards
     while($row = $result->fetch_assoc()) {
-        $name = isset($row["name"]) ? $row["name"] : "Unknown"; // Handle missing names
+        $first_name = isset($row["first_name"]) ? $row["first_name"] : "Unknown";
+        $last_name = isset($row["last_name"]) ? $row["last_name"] : "";
+        $room = isset($row["room"]) ? $row["room"] : "";
+        $full_name = htmlspecialchars(trim("$first_name $last_name")); // Combine and trim the name
         $id = $row["id"];
         
         echo '
         <div class="card">
+        <span class="material-symbols-rounded top-right-card" onclick="window.location.href=\'edit/?id=' . $id . '\'">edit</span>
+        <span class="material-symbols-rounded top-right-card tr2" onclick="window.location.href=\'delete/?id=' . $id . '\'">delete</span>
             <div class="pic blue"><span class="material-symbols-rounded">person</span></div>
             <div class="text">
-                <div class="sub">User  -  ' . htmlspecialchars($name) . '</div>
+                <div class="sub">' . "Room " . $room . "  |  " . ($full_name ?: "Unknown") . '</div>
                 <div class="main">' . htmlspecialchars(str_pad($id, 3, '0', STR_PAD_LEFT)) . '</div>
             </div>
         </div>';
@@ -82,6 +87,7 @@ if ($result->num_rows > 0) {
     echo "No hubs found.";
 }
 ?>
+
 
 
 

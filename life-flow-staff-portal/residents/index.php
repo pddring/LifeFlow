@@ -18,41 +18,45 @@
         
 
             <div class="card-title">
-                <p>Residents</p>
+                <p>Residents</p><a class="material-symbols-rounded action" href="create">add</a>
             </div>
 
 
             <?php
-                            // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-                // Query to fetch resident data
-                $sql = "SELECT name, age FROM lifeflow_residents";  // Change 'residents' to your actual table name
-                $result = $conn->query($sql);
+// Query to fetch resident data
+$sql = "SELECT first_name, last_name, age FROM lifeflow_residents";  // Updated column names
+$result = $conn->query($sql);
 
-                // Check if there are results
-                if ($result->num_rows > 0) {
-                    // Loop through the results and generate cards
-                    while($row = $result->fetch_assoc()) {
-                        $name = $row["name"];
-                        $age = $row["age"];
-                        // You can modify the name variable to format it as you want (e.g., Midred B. to Midred B)
-                        echo '
-                        <div class="card">
-                            <div class="pic blue"><span class="material-symbols-rounded">person</span></div>
-                            <div class="text">
-                                <div class="sub">Age ' . htmlspecialchars($age) . '</div>
-                                <div class="main">' . htmlspecialchars($name) . '</div>
-                            </div>
-                        </div>';
-                    }
-                } else {
-                    echo "No residents found.";
-                }
+// Check if there are results
+if ($result->num_rows > 0) {
+    // Loop through the results and generate cards
+    while($row = $result->fetch_assoc()) {
+        $first_name = $row["first_name"];
+        $last_name = $row["last_name"];
+        $age = $row["age"];
+        
+        // Combine first and last name
+        $full_name = htmlspecialchars($first_name . " " . $last_name);
 
-            ?>
+        echo '
+        <div class="card">
+            <div class="pic blue"><span class="material-symbols-rounded">person</span></div>
+            <div class="text">
+                <div class="sub">Age ' . htmlspecialchars($age) . '</div>
+                <div class="main">' . $full_name . '</div>
+            </div>
+        </div>';
+    }
+} else {
+    echo "No residents found.";
+}
+?>
+
 
 
 

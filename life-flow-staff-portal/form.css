@@ -10,16 +10,35 @@ form {
 #confirm {
     background-color: var(--blue);
     color: #fff;
+    width: 120px;
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 500;
 }
 #cancel {
     background-color: #fff;
     color: var(--blue);
+    width: 120px;
+    display: inline-block;
+    font-weight: 500;
 }
 label {
     color: #fff;
+    margin-bottom: 10px !important;
+    font-weight: 500;
 }
-.form-item {
+.form-item, input[type=button], input[type=submit] {
     background-color: var(--dark);
+    outline: none;
+    padding: 0 12px;
+    border: 0;
+    box-sizing: border-box;
+    height: 35px;
+    border-radius: 15px;
+    color: var(--text);
+    display: block;
+    width: 250px;
+    margin: 10px 0 15px 0;
 }
 .content p {
     font-size: 30px;

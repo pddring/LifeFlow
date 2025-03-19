@@ -10,6 +10,9 @@
             <a class="link" href="../../incidents/">
                 <div class="icon"><span class="material-symbols-rounded">warning</span></div> Incidents
             </a>
+            <a class="link" href="../../stats/">
+                <div class="icon"><span class="material-symbols-rounded">monitoring</span></div> Statistics
+            </a>
             <a class="link" href="../../hubs/">
                 <div class="icon"><span class="material-symbols-rounded">hub</span></div> LifeFlow Hubs
             </a>
@@ -57,9 +60,9 @@ document.querySelectorAll("a").forEach(a => {
     // If there are subfolders, match the first segment
     if (firstSegment && href.includes(firstSegment)) {
         a.classList.add("active");
-    } 
+    }
     // If no subfolders, apply "active" only to href="../"
-    else if (!firstSegment && href === "../") {
+        else if (!firstSegment && href === "../../") {
         a.classList.add("active");
     }
 });
@@ -80,7 +83,7 @@ document.querySelectorAll("a").forEach(a => {
     function checkUnreadIncidents() {
         console.log("Checking unread incidents...");
 
-        fetch("../checkUnreadIncidents.php")
+        fetch("../../checkUnreadIncidents.php")
             .then(response => response.json())
             .then(data => {
                 console.log("Unread incidents data:", data);
@@ -98,35 +101,8 @@ document.querySelectorAll("a").forEach(a => {
     }
 
     // Periodically check for unread incidents every 15 seconds (15000 milliseconds)
-    setInterval(checkUnreadIncidents, 15000);
+    setInterval(checkUnreadIncidents, 3000);
     checkUnreadIncidents();
-
-    // If the URL contains "incidents", delay marking all as read by 3 seconds
-    if (window.location.href.includes("incidents")) {
-        console.log("URL contains 'incidents'. Marking all as read after 3 seconds...");
-
-        // Delay the execution by 3 seconds (3000 milliseconds)
-        setTimeout(() => {
-            document.querySelectorAll(".circle").forEach(circle => {
-                        // Only add "circle-active" if it hasn't been added already
-                        if (!circle.classList.contains("circle-active")) {
-                            circle.classList.remove("circle-active");
-                        }
-                    });
-            fetch("../updateReadStatus.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ read_status: 1 })
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log("Update read status response:", data);
-            })
-            .catch(error => console.error("Error updating read status:", error));
-        }, 3000); // 3-second delay
-    }
 
     // Handle the notification click event
     if (notifications) {
