@@ -7,7 +7,7 @@
 - - [LifeFlow Hub](#lifeFlow-hub)
 - - [LifeFlow Badge](#lifeFlow-badge)
 - - [LifeFlow Staff Portal](#lifeFlow-staff-portal)
-- - [3D Printing](#build-guide)
+- - [3D Printing](#3d-printing-&-cad-design)
 - [Business Models](#our-business-models)
 
 ## About
