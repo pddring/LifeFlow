@@ -125,5 +125,5 @@ Our deisign for the LifeFlow Hub Can be viewed [here](https://app.sketchup.com/s
 
 
 ## Our Business Models
-The cost of medical technology can sometimes be prohibitive but our business plan maps out how LifeFlow can not only improve the health, independence and quality of life for patients but also reduce private health insurance premiums, save money for care homes and reduce the strain on NHS primary healthcare.
-<img src="https://raw.githubusercontent.com/megacooki/LifeFlow/main/Readme%20Files/Business%20model.png" width="25%">
+
+Our original marketing plan aimed the LifeFlow hub at individuals to reduce strain on the NHS. Since the addition of the LifeFlow Badge and Staff Portal, our new business model aims the LifeFLow System at retirement accomidation and care homes due to its ability to provide staff with advanced insights into residents health.
