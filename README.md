@@ -7,14 +7,16 @@
 - [Business Models](#our-business-models)
 
 ## About
-![image](https://github.com/pddring/LifeFlow/assets/760604/cff61df2-a79f-4c98-a820-fbc6ab4de174)
+![image]()
 
 
-LifeFlow is a system that allows the elderly to take control of their own health by giving them the ability to monitor their vitals from home. The LifeFlow device uses a Raspberry Pi to log sensor readings which can be used to inform treatment plans and monitor the health of patients. LifeFlow also has medication reminders which prompt users to take their medication at the right time. This allows the elderly to be more independent, reducing their reliance on others such as carers and family members. 
-LifeFlow monitors vitals by using modular sensors that attach to the main device. These modules currently include heart rate, blood oxygen and body temperature. Another important feature of LifeFlow is its emergency alert system: with the press of a single button the device is able to alert the emergency services and up to three emergency contacts. 
-We created the device with accessibility in mind. The device has a simple user interface and accessibility features making it easy to use. The modular system allows users to connect to most relevant sensors and tools depending on their needs which can be customized for an individual’s treatment plan.
-The initial system setup is designed to be as simple as possible, with only 3 steps which include choosing a language, entering your personal details and emergency contact information.
-Our working prototype is enclosed in a custom-designed 3D-printed case giving it a stylish and easy to use appearance that is ready to scale up to boost independent living, quality of life and save money for the NHS.
+LifeFlow is an integrated health care management system designed to give detailed insights to carers and to give residence the most high-quality care possible. LifeFlow is made with HTML, PHP, CSS, JS & Python. In total the whole system contains around 10,000 lines of code. 
+
+The LifeFlow system is comprised of three parts: The Hub, Staff Portal, and the ID Badges. The hub uses a Raspberry Pi to log sensor readings which can be used to inform treatment plans and monitor the health of patients. It has medication reminders which prompt users to take their medication at the right time. This allows the elderly to be more independent, reducing their reliance on others such as carers and family members. The hub can monitor vitals by using modular sensors that attach to the main device. These modules currently include heart rate, blood oxygen and body temperature. The device has a simple user interface and accessibility features making it easy to use.  Our working prototype is enclosed in a custom-designed 3D-printed case giving it a stylish and easy to use appearance. 
+
+The Badges can be worn by the residents so that they can be easily identified. They are also fitted with an accelerometer which can detect sudden movement e.g. if the user falls. An alert is then sent to the staff via the staff portal allowing help to reach the resident. In the future we would like to add GPS location tracking to the lanyards allowing an even easier and more advanced experience. Both the badge and the hub have an emergency button. 
+
+Finally, the Staff Portal is a web app that allows care homes to get advanced insights into their residents. It also notifies carers when a fall is detected, or an emergency button is pressed. The staff portal links the badges and hubs to one location with an easy-to-use user interface for staff. The staff portal shows a resident’s sensor logs, age, and other information allowing carers and family members to get an idea of how a resident or loved one is doing. 
 
 ## Build Guide
 ### Parts
