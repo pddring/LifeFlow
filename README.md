@@ -2,14 +2,19 @@
 
 > PA Consulting Raspberry Pi competition entry 2025
 
-- [About](#about)
+- [Summary](#summary)
 - [Build Guide](#build-guide)
+- - [LifeFlow Hub](#lifeFlow-hub)
+- - [LifeFlow Badge](#lifeFlow-badge)
+- - [LifeFlow Staff Portal](#lifeFlow-staff-portal)
+- - [3D Printing](#build-guide)
 - [Business Models](#our-business-models)
 
 ## About
 
 ![image](https://github.com/user-attachments/assets/ee4331ec-a89a-46ab-bad1-bfc7be4c5275)
 
+## Summary
 
 LifeFlow is an integrated health care management system designed to give detailed insights to carers and to give residence the most high-quality care possible. LifeFlow is made with HTML, PHP, CSS, JS & Python. In total the whole system contains around 10,000 lines of code. 
 
