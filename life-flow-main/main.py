@@ -7,8 +7,6 @@ import json
 import requests
 
 
-#gpio
-
 def UI():
     @eel.expose
     def readData(key):
@@ -56,7 +54,7 @@ def UI():
         hub_id = data['hub']  # Assuming 'hub' contains the hub ID value
 
         # Construct the URL with the retrieved hub_id
-        url = f"http://lifeflow.local/api/hub_alert.php?hub_id={hub_id}"
+        url = f"http://localhost/api/hub_alert.php?hub_id={hub_id}"
 
         # Send a GET request to the constructed URL
         try:

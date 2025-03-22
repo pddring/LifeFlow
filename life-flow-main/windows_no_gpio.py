@@ -31,7 +31,7 @@ def UI():
     @eel.expose
     def emergency():
         print('Sending emergency alerts...')
-        #lflowalerts.send(readData("first_name") + " " + readData("last_name"))
+        lflowalerts.send(readData("first_name") + " " + readData("last_name"))
 
         # Send Request to Incidents API
         # Load the JSON file to retrieve the ID
@@ -42,7 +42,7 @@ def UI():
         hub_id = data['hub']  # Assuming 'hub' contains the hub ID value
 
         # Construct the URL with the retrieved hub_id
-        url = f"http://lifeflow.local/api/hub_alert.php?hub_id={hub_id}"
+        url = f"http://localhost/api/hub_alert.php?hub_id={hub_id}"
 
         # Send a GET request to the constructed URL
         try:
@@ -110,7 +110,7 @@ def fetch_and_update_settings(file_path):
             return
         
         # API URL to fetch hub information
-        api_url = f"http://lifeflow.local/api/hub_info.php?id={hub_id}"
+        api_url = f"http://localhost/api/hub_info.php?id={hub_id}"
         
         # Fetch the data from the API
         response = requests.get(api_url)

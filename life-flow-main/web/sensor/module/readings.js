@@ -20,7 +20,7 @@ function getRandomValue(min, max, decimals = 0) {
 
 // Function to send data to the API
 function sendSensorData(type, value) {
-    const url = `http://lifeflow.local/api/vitals.php?hub_id=${hub_id}&type=${type}&value=${value}`;
+    const url = `http://localhost/api/vitals.php?hub_id=${hub_id}&type=${type}&value=${value}`;
     
     fetch(url)
         .then(response => response.json())

@@ -9,7 +9,7 @@ fetch('../../settings.json')
     const ID = data.hub;
 
     // Construct the URL with the retrieved ID
-    const url = "http://lifeflow.local/api/fall_detected.php?badge_id=" + ID;
+    const url = "http://localhost/api/fall_detected.php?badge_id=" + ID;
 
     // Send a GET request to the constructed URL
     fetch(url)
