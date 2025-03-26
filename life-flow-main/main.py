@@ -88,7 +88,7 @@ def UI():
 
     eel.init("web")   
     print("yes")
-    eel.start("load-redirect.html", port=8000)
+    eel.start("load-redirect.html", port=8000, options={'cmdline_args': ['--disable-http-cache']}, jinja_templates='.')
 
 def GPIO():
 
