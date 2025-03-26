@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="/eel.js"></script>
-  <script src="readings.js"></script>
+  <script src="../script.js"></script>
   <script type="text/javascript" src="../../events.js"></script>
   <title>Life Flow</title>
 
@@ -38,7 +38,7 @@
         <div class="loader">
           <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </div>
-        <p class="sensor-info" id="reading-container">-- XX --</p>
+        <p class="sensor-info">-- 70 --</p>
         <p class="sensor-unit">bpm</p>
         <br><br><br>
         <p>Currently measuring live heart rate</p>
@@ -50,9 +50,12 @@
         </div>
 
       </div>
-    <p class="copyright">&copy; 2025 Life Flow. All rights reserved.</p>
+    <p class="copyright">&copy; 2024 Life Flow. All rights reserved.</p>
   </div>
 
+  <script>
+    heart();
+  </script>
 
   <!-- NARRARATOR -->
   <script>
@@ -69,5 +72,6 @@
       }
     }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

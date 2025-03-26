@@ -35,6 +35,12 @@ def UI():
         return(s1.take())
     
     @eel.expose
+    def sensor_heart():
+        import Sensor_Heart as s2
+        print("fetching pulse...")
+        return(s2.take())
+    
+    @eel.expose
     def check_I2C():
         import Sensor_Temperature as s1
         print("I2C checking...")
