@@ -5,6 +5,7 @@ import subprocess
 import time
 import pyautogui
 import multiprocessing
+import sys
 
 # Function to update settings in the JSON file
 def update_settings(file_path, updated_data):
@@ -91,10 +92,12 @@ def UI():
     @eel.expose
     def git_pull():
         try:
+            print("Performing git pull...")
             result = subprocess.run(["git", "pull"], capture_output=True, text=True)
-            return result.stdout
+            print(result.stdout)  # Print the output of the git pull command
+            eel.quit()  # Close the app gracefully after the pull
         except Exception as e:
-            return str(e)
+            print(f"Error during git pull: {e}")
 
     @eel.expose
     def emergency():

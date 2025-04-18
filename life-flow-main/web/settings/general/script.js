@@ -47,6 +47,5 @@ function restart() {
    function handleGitPull() {
     eel.git_pull()(function(result) {
         // Display the result of the git pull operation
-        document.getElementById('output').textContent = result;
     });
 }
