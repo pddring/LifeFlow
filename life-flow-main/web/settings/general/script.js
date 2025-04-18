@@ -42,3 +42,11 @@ function restart() {
   eel.writeData("completed_setup", "false");
   transitionToPage("../../register/index.html");
 }
+
+   // Define the function that is triggered by the 'onclick' event
+   function handleGitPull() {
+    eel.git_pull()(function(result) {
+        // Display the result of the git pull operation
+        document.getElementById('output').textContent = result;
+    });
+}

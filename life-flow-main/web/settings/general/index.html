@@ -40,7 +40,14 @@
           <div class="content">
 
             <div class="btnBlock">
-              <input class="btn re"  type="button" onclick="restart()" value="Restart Setup" style="background-color: rgb(215, 64, 64);">
+              <!--<input class="btn re"  type="button" onclick="restart()" value="Restart Setup" style="background-color: rgb(215, 64, 64);">-->
+              <input class="btn re" disabled type="button" onclick="restart()" value="Restart Setup" style="background-color: rgb(129, 129, 129);">
+              <input class="btn re" disabled type="button" onclick="handleGitPull()" value="Update">
+              <br>
+              <hr>
+              <br>
+              <p style="font-size: 0.8rem;">Your device is managed by your care home, setup is currently unavailable. Please contact your care home if you wish to update any information.</p>
+              <br>
               <input class="btn re"  type="submit" onclick="transitionToPage('../index.html')" value="Done">
             </div>
 
