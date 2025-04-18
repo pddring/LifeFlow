@@ -1,9 +1,9 @@
-import max30102
+from heartrate_monitor import HeartRateMonitor
 import time
 
 def take(raw=False):
     """Take one valid reading from the MAX30102 sensor."""
-    hrm = max30102(print_raw=raw, print_result=(not raw))
+    hrm = HeartRateMonitor(print_raw=raw, print_result=(not raw))
     hrm.start_sensor()
     
     print("Waiting for a valid reading...")

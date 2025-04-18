@@ -42,20 +42,23 @@
       </div>-->
 
       <div class="wrapper">
-        <h1 id="message" class="re fade-in-out">Personal Info</h1>
+        <h1 id="message" class="re fade-in-out">User Info</h1>
           <div class="content">
             <div class="btnBlock">
-              <strong>First Name*</strong>
-              <input onClick="transitionToPage('1.html')" class="btn re" required type="text" placeholder="type here..." id="first_name" readonly>
-
-              <strong>Last Name*</strong>
-              <input onClick="transitionToPage('2.html')" class="btn re"  type="text" placeholder="type here..." id="last_name" readonly>
-
+              <strong>First Name</strong>
+              <p class="info_p" data-json="first_name">Bob</p>
+              <strong>Last Name</strong>
+              <p class="info_p" data-json="last_name">Dylan</p>
               <strong>Age</strong>
-              <input onClick="transitionToPage('3.html')" class="btn re"  type="number" placeholder="type here..." id="age" readonly>
-
-              <input class="btn re"  type="submit" value="Save Info" onclick="transitionToPage('../index.html');">
-              <p>* This information may be shared with emergency services and/or your emergency contacts.</p>
+              <p class="info_p" data-json="age">32</p>
+              <strong>Gender</strong>
+              <p class="info_p" data-json="gender">Male</p>
+              <strong>Room</strong>
+              <p class="info_p" data-json="room">134</p>
+              <br>
+              <p class="info_fine">This device is managed by your care home</p>
+<br>
+              <input class="btn re"  type="submit" value="Continue" onclick="transitionToPage('../index.html');">
             </div>
           </div>
         <!--<p class="copyright">&copy; 2025 Life Flow. All rights reserved.</p>-->

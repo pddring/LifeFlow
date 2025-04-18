@@ -96,6 +96,7 @@ def update_settings(file_path, updated_data):
         print(f"An error occurred: {e}")
 
 # Function to fetch data from the API and update the settings
+@eel.expose
 def fetch_and_update_settings(file_path):
     try:
         # Open the settings.json file and read the hub ID
