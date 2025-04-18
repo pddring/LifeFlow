@@ -1,16 +1,12 @@
 import eel
-import multiprocessing
-import pyautogui
-import time
 import json
 import requests
 import subprocess
+import time
+import pyautogui
+import multiprocessing
 
-last_request_time = 0  # Global variable to track time between requests
-request_count = 0  # Global variable to count the number of emergency requests
-api_request_count = 0  # Global variable to count the number of API fetch and update requests
-
-# Function to update settings in a JSON file
+# Function to update settings in the JSON file
 def update_settings(file_path, updated_data):
     try:
         with open(file_path, 'r') as file:
@@ -28,11 +24,7 @@ def update_settings(file_path, updated_data):
 
 # Function to fetch and update settings from an API
 def fetch_and_update_settings(file_path):
-    global api_request_count
     try:
-        api_request_count += 1  # Increment the API request count
-        print(f"API Request count: {api_request_count}")  # Print the API request count
-
         with open(file_path, 'r') as file:
             settings = json.load(file)
         hub_id = settings.get("hub", None)
@@ -41,11 +33,6 @@ def fetch_and_update_settings(file_path):
             return
         api_url = f"http://localhost/api/hub_info.php?id={hub_id}"
         response = requests.get(api_url)
-
-        if response.status_code == 429:
-            print("Error: Too many requests. Please try again later.")
-            return
-
         if response.status_code == 200:
             hub_data = response.json()
             if all(key in hub_data for key in ["first_name", "last_name", "age", "gender", "room"]):
@@ -64,18 +51,18 @@ def fetch_and_update_settings(file_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-# Main UI function
+# Eel UI setup
 def UI():
     @eel.expose
     def readData(key):
-        print("reading from json...")
+        print("Reading from json...")
         with open("settings.json", "r") as jsonFile:
             data = json.load(jsonFile)
         return str(data.get(key, ""))
 
     @eel.expose
     def writeData(key, value):
-        print("writing to json...")
+        print("Writing to json...")
         with open("settings.json", "r") as jsonFile:
             data = json.load(jsonFile)
         data[key] = value
@@ -86,13 +73,13 @@ def UI():
     @eel.expose
     def sensor_temp():
         import Sensor_Temperature as s1
-        print("fetching temperature...")
+        print("Fetching temperature...")
         return s1.take()
 
     @eel.expose
     def sensor_heart():
         import Sensor_Heart as s2
-        print("fetching pulse...")
+        print("Fetching pulse...")
         return s2.take()
 
     @eel.expose
@@ -100,30 +87,17 @@ def UI():
         import Sensor_Temperature as s1
         print("I2C checking...")
         return s1.check()
-    
+
     @eel.expose
     def git_pull():
         try:
             result = subprocess.run(["git", "pull"], capture_output=True, text=True)
-            return result.stdout  # Return the output of the git pull command
+            return result.stdout
         except Exception as e:
             return str(e)
 
     @eel.expose
     def emergency():
-        global last_request_time
-        global request_count
-        current_time = time.time()
-
-        # Prevent sending requests too quickly
-        if current_time - last_request_time < 10:  # 10 seconds delay between requests
-            print("Emergency request too soon. Try again later.")
-            return
-
-        last_request_time = current_time
-        request_count += 1  # Increment the request count
-
-        print(f"Emergency request count: {request_count}")  # Print the request count
         print('Sending emergency alerts...')
         with open('settings.json', 'r') as file:
             data = json.load(file)
@@ -145,18 +119,25 @@ def UI():
         pyautogui.hotkey("fn", "f11")
 
     @eel.expose
-    def bingR():
-        return 'No wallpaper found'
+    def ping_server():
+        # Dummy function to ensure server is active
+        print("Ping received - server is alive")
+        return "Server is up and running!"
 
     # Perform server sync before starting UI
     fetch_and_update_settings("settings.json")
 
     # Initialize and start Eel
     eel.init("web")
-    print("Starting Eel...")
-    eel.start("load-redirect.html", port=8000, cmdline_args=['--disable-http-cache'], block=True)
+    print("Waiting for Eel server to be fully ready...")
+    time.sleep(2)  # Give the server a little time to initialize before starting the UI
+    try:
+        eel.start("load-redirect.html", port=8000, cmdline_args=['--disable-http-cache'], block=True)
+        print("Eel server started and running...")
+    except Exception as e:
+        print(f"Error starting Eel: {e}")
 
-# GPIO Handling
+# GPIO Setup for emergency and home buttons
 def GPIO():
     def home():
         print("Home Button Pressed")
@@ -169,6 +150,9 @@ def GPIO():
         time.sleep(1)
 
 if __name__ == '__main__':
+    # Start GPIO process
     gpio_process = multiprocessing.Process(target=GPIO)
     gpio_process.start()
+
+    # Start the UI
     UI()
