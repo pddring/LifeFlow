@@ -159,10 +159,8 @@ def UI():
     time.sleep(2)
 
     try:
-        eel.start("load-redirect.html", port=port, cmdline_args=['--disable-http-cache'], mode=None, block=False)
-        print("Eel server started and running...")
-        while True:
-            eel.sleep(1.0)
+        eel.start("load-redirect.html", port=port, cmdline_args=['--disable-http-cache'], mode=None)
+
     except Exception as e:
         print(f"Error starting Eel: {e}")
 
