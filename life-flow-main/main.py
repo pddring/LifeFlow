@@ -6,6 +6,7 @@ import time
 import pyautogui
 import multiprocessing
 import sys
+import socket
 
 # Function to update settings in the JSON file
 def update_settings(file_path, updated_data):
@@ -52,6 +53,12 @@ def fetch_and_update_settings(file_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+# Get a free port from the OS
+def get_free_port():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(('', 0))
+        return s.getsockname()[1]
+
 # Eel UI setup
 def UI():
     @eel.expose
@@ -94,8 +101,8 @@ def UI():
         try:
             print("Performing git pull...")
             result = subprocess.run(["git", "pull"], capture_output=True, text=True)
-            print(result.stdout)  # Print the output of the git pull command
-            eel.quit()  # Close the app gracefully after the pull
+            print(result.stdout)
+            eel.quit()
         except Exception as e:
             print(f"Error during git pull: {e}")
 
@@ -123,19 +130,19 @@ def UI():
 
     @eel.expose
     def ping_server():
-        # Dummy function to ensure server is active
         print("Ping received - server is alive")
         return "Server is up and running!"
 
-    # Perform server sync before starting UI
+    # Sync with API before launching UI
     fetch_and_update_settings("settings.json")
 
-    # Initialize and start Eel
+    # Start Eel server with an automatically free port
     eel.init("web")
-    print("Waiting for Eel server to be fully ready...")
-    time.sleep(2)  # Give the server a little time to initialize before starting the UI
+    port = get_free_port()
+    print(f"Starting Eel on port {port}...")
+    time.sleep(2)
     try:
-        eel.start("load-redirect.html", port=8000, cmdline_args=['--disable-http-cache'], block=True)
+        eel.start("load-redirect.html", port=port, cmdline_args=['--disable-http-cache'], block=True)
         print("Eel server started and running...")
     except Exception as e:
         print(f"Error starting Eel: {e}")
