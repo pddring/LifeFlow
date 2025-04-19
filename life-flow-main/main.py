@@ -61,6 +61,19 @@ def get_free_port():
 
 # Eel UI setup
 def UI():
+    # Try importing sensors safely
+    try:
+        import Sensor_Temperature as s1
+    except Exception as e:
+        print(f"Failed to import Sensor_Temperature: {e}")
+        s1 = None
+
+    try:
+        import Sensor_Heart as s2
+    except Exception as e:
+        print(f"Failed to import Sensor_Heart: {e}")
+        s2 = None
+
     @eel.expose
     def readData(key):
         print("Reading from json...")
@@ -80,21 +93,24 @@ def UI():
 
     @eel.expose
     def sensor_temp():
-        import Sensor_Temperature as s1
         print("Fetching temperature...")
-        return s1.take()
+        if s1:
+            return s1.take()
+        return "Temperature sensor unavailable"
 
     @eel.expose
     def sensor_heart():
-        import Sensor_Heart as s2
         print("Fetching pulse...")
-        return s2.take()
+        if s2:
+            return s2.take()
+        return "Heart rate sensor unavailable"
 
     @eel.expose
     def check_I2C():
-        import Sensor_Temperature as s1
-        print("I2C checking...")
-        return s1.check()
+        print("Checking I2C bus...")
+        if s1:
+            return s1.check()
+        return "Temperature sensor unavailable"
 
     @eel.expose
     def git_pull():
@@ -109,17 +125,17 @@ def UI():
     @eel.expose
     def emergency():
         print('Sending emergency alerts...')
-        with open('settings.json', 'r') as file:
-            data = json.load(file)
-        hub_id = data.get('hub', '')
-        url = f"http://localhost/api/hub_alert.php?hub_id={hub_id}"
         try:
+            with open('settings.json', 'r') as file:
+                data = json.load(file)
+            hub_id = data.get('hub', '')
+            url = f"http://localhost/api/hub_alert.php?hub_id={hub_id}"
             response = requests.get(url)
             if response.status_code == 200:
                 print("Request successful")
             else:
                 print(f"Request failed with status: {response.status_code}")
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(f"Error with the request: {e}")
 
     @eel.expose
@@ -141,9 +157,12 @@ def UI():
     port = get_free_port()
     print(f"Starting Eel on port {port}...")
     time.sleep(2)
+
     try:
-        eel.start("load-redirect.html", port=port, cmdline_args=['--disable-http-cache'], block=True)
+        eel.start("load-redirect.html", port=port, cmdline_args=['--disable-http-cache'], mode=None, block=False)
         print("Eel server started and running...")
+        while True:
+            eel.sleep(1.0)
     except Exception as e:
         print(f"Error starting Eel: {e}")
 
@@ -160,6 +179,8 @@ def GPIO():
         time.sleep(1)
 
 if __name__ == '__main__':
+    multiprocessing.set_start_method('fork')  # Safe for Pi/Linux
+
     # Start GPIO process
     gpio_process = multiprocessing.Process(target=GPIO)
     gpio_process.start()
