@@ -27,7 +27,7 @@
       <div class="content">
 
         <div class="btnBlock">
-          <input class="btn re"  type="button" onclick="transitionToPage('settings/accessibility/index.html')" class="re" value="English">
+          <input class="btn re"  type="button" onclick="transitionToPage('settings/accessibility/index.html')" value="English">
           <input class="btn re"  type="button" onclick="window.location.href='#'" value="Español">
           <input class="btn re"  type="button" onclick="window.location.href='#'" value="Français">
           <input class="btn re"  type="button" onclick="window.location.href='#'" value="Norsk">
@@ -44,7 +44,7 @@
     let canSpeak = true;
     
     function speakText(element) {
-      if (canSpeak) {
+      /*if (canSpeak) {
         canSpeak = false;
     
         const textToSpeak = element.innerText.trim();
@@ -60,7 +60,7 @@
         setTimeout(() => {
           canSpeak = true;
         }, 500);
-      }
+      }*/
     }
     
     // Attach event listeners to all elements with the class "re"

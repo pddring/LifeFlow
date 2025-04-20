@@ -15,7 +15,7 @@ time.sleep(10)  # Wait for 10 seconds to collect data
 data = monitor.get_data()
 
 # Print the results
-print(f"Heart Rate: {data['heart_rate']} BPM, SpO2: {data['spo2']}")
+print(f"SpO2: {data['spo2']}")
 
 # Stop the sensor when done
 monitor.stop_sensor()

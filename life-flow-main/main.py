@@ -3,9 +3,11 @@ import json
 import requests
 import subprocess
 import time
-import pyautogui
+from smbus2 import SMBus
 import multiprocessing
 import sys
+import gevent
+from heartrate_monitor import HeartRateMonitor
 
 # Function to update settings in the JSON file
 def update_settings(file_path, updated_data):
@@ -79,15 +81,66 @@ def UI():
 
     @eel.expose
     def sensor_heart():
-        import Sensor_Heart as s2
         print("Fetching pulse...")
-        return s2.take()
+        
+        hrm = HeartRateMonitor(print_raw=False, print_result=True)
+        hrm.start_sensor()
+
+        try:
+            print("Waiting for finger...")
+            while True:
+                reading = hrm.get_data()
+                if reading and reading['heart_rate'] > 0:  # Ensure a valid heart rate is available
+                    heart_rate = reading['heart_rate']
+                    print("Finger detected. Heart rate:", heart_rate)
+                    hrm.stop_sensor()
+                    return str(heart_rate)  # Return heart rate as a string
+                time.sleep(0.5)  # Wait before checking again
+        except KeyboardInterrupt:
+            print("Interrupted.")
+            hrm.stop_sensor()
+            return None
+
+    @eel.expose
+    def sensor_spo2():
+        print("Fetching SpO₂...")
+
+        hrm = HeartRateMonitor(print_raw=False, print_result=True)
+        hrm.start_sensor()
+
+        try:
+            print("Waiting for finger...")
+            while True:
+                reading = hrm.get_data()
+                if reading and reading['spo2'] > 0:  # Ensure a valid SpO₂ is available
+                    spo2 = reading['spo2']
+                    print("Finger detected. SpO₂:", spo2)  # Corrected print statement
+                    hrm.stop_sensor()
+                    return str(spo2)  # Return SpO₂ as a string
+                time.sleep(0.5)  # Wait before checking again
+        except KeyboardInterrupt:
+            print("Interrupted.")
+            hrm.stop_sensor()
+            return None
+        except Exception as e:
+            print(f"Error fetching SpO₂: {e}")
+            hrm.stop_sensor()
+            return None
+
 
     @eel.expose
     def check_I2C():
-        import Sensor_Temperature as s1
-        print("I2C checking...")
-        return s1.check()
+        bus = SMBus(0)  # Use I2C bus 0 (/dev/i2c-0)
+        addresses = []
+        for addr in range(0x03, 0x77):
+            try:
+                bus.write_quick(addr)
+                addresses.append(hex(addr))
+            except:
+                continue
+        bus.close()
+        print("ADDRESSES:", addresses)  # Using the comma will automatically format the list as a string
+        return addresses
 
     @eel.expose
     def git_pull():
@@ -119,13 +172,7 @@ def UI():
     def fullscreen():
         print('Entering fullscreen...')
         time.sleep(0.5)
-        pyautogui.hotkey("fn", "f11")
-
-    @eel.expose
-    def ping_server():
-        # Dummy function to ensure server is active
-        print("Ping received - server is alive")
-        return "Server is up and running!"
+        #pyautogui.hotkey("fn", "f11")
 
     # Perform server sync before starting UI
     fetch_and_update_settings("settings.json")
@@ -133,12 +180,15 @@ def UI():
     # Initialize and start Eel
     eel.init("web")
     print("Waiting for Eel server to be fully ready...")
-    time.sleep(2)  # Give the server a little time to initialize before starting the UI
+    time.sleep(3)  # Give the server a little time to initialize before starting the UI
     try:
-        eel.start("load-redirect.html", port=8000, cmdline_args=['--disable-http-cache'], block=True)
+        eel.start("home/index.html", port=8123, cmdline_args=['--disable-http-cache'], block=False)
         print("Eel server started and running...")
     except Exception as e:
         print(f"Error starting Eel: {e}")
+
+    # Run the gevent event loop to prevent the script from exiting
+    gevent.get_hub().join()
 
 # GPIO Setup for emergency and home buttons
 def GPIO():
