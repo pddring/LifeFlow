@@ -27,4 +27,4 @@ def sensor_heart():
         finally:
             monitor.stop_sensor()
 
-    sensor_heart()
+sensor_heart()
