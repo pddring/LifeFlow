@@ -172,7 +172,7 @@ def UI():
     def fullscreen():
         print('Entering fullscreen...')
         time.sleep(0.5)
-        #pyautogui.hotkey("fn", "f11")
+        pyautogui.hotkey("fn", "f11")
 
     # Perform server sync before starting UI
     fetch_and_update_settings("settings.json")
