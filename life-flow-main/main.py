@@ -81,51 +81,51 @@ def UI():
 
     @eel.expose
     def sensor_heart():
-        print("Fetching pulse...")
-        
-        hrm = HeartRateMonitor(print_raw=False, print_result=True)
-        hrm.start_sensor()
+        print("Collecting pulse for 10 seconds...", flush=True)
+        monitor = HeartRateMonitor(print_raw=True, print_result=True)
+        monitor.start_sensor()
 
         try:
-            print("Waiting for finger...")
-            while True:
-                reading = hrm.get_data()
-                if reading and reading['heart_rate'] > 0:  # Ensure a valid heart rate is available
-                    heart_rate = reading['heart_rate']
-                    print("Finger detected. Heart rate:", heart_rate)
-                    hrm.stop_sensor()
-                    return str(heart_rate)  # Return heart rate as a string
-                time.sleep(0.5)  # Wait before checking again
+            time.sleep(10)
+
+            data = monitor.get_data()
+            if data and data['heart_rate'] > 0:
+                heart_rate = data['heart_rate']
+                print(f"Heart Rate: {heart_rate} BPM, SpO2: {data['spo2']}", flush=True)
+                return str(heart_rate)
+            else:
+                print("No valid heart rate detected.", flush=True)
+                return None
         except KeyboardInterrupt:
-            print("Interrupted.")
-            hrm.stop_sensor()
+            print("Interrupted.", flush=True)
             return None
+        finally:
+            monitor.stop_sensor()
+
 
     @eel.expose
     def sensor_spo2():
-        print("Fetching SpO₂...")
-
-        hrm = HeartRateMonitor(print_raw=False, print_result=True)
-        hrm.start_sensor()
+        print("Collecting SpO₂ for 10 seconds...", flush=True)
+        monitor = HeartRateMonitor(print_raw=True, print_result=True)
+        monitor.start_sensor()
 
         try:
-            print("Waiting for finger...")
-            while True:
-                reading = hrm.get_data()
-                if reading and reading['spo2'] > 0:  # Ensure a valid SpO₂ is available
-                    spo2 = reading['spo2']
-                    print("Finger detected. SpO₂:", spo2)  # Corrected print statement
-                    hrm.stop_sensor()
-                    return str(spo2)  # Return SpO₂ as a string
-                time.sleep(0.5)  # Wait before checking again
+            time.sleep(10)
+
+            data = monitor.get_data()
+            if data and data['spo2'] > 0:
+                spo2 = data['spo2']
+                print(f"SpO₂: {spo2}%", flush=True)
+                return str(spo2)
+            else:
+                print("No valid SpO₂ detected.", flush=True)
+                return None
         except KeyboardInterrupt:
-            print("Interrupted.")
-            hrm.stop_sensor()
+            print("Interrupted.", flush=True)
             return None
-        except Exception as e:
-            print(f"Error fetching SpO₂: {e}")
-            hrm.stop_sensor()
-            return None
+        finally:
+            monitor.stop_sensor()
+
 
 
     @eel.expose

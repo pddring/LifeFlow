@@ -1,21 +1,30 @@
 import time
+import sys
+import gevent
 from heartrate_monitor import HeartRateMonitor
 
-# Create an instance of the heart rate monitor
-monitor = HeartRateMonitor(print_raw=True, print_result=True)
+def sensor_heart():
+        print("Collecting pulse for 10 seconds...")
 
-# Start the sensor in a background thread
-monitor.start_sensor()
+        monitor = HeartRateMonitor(print_raw=True, print_result=True)
+        monitor.start_sensor()
 
-# Wait for the sensor to collect data for a specified time
-print("Collecting data...")
-time.sleep(10)  # Wait for 10 seconds to collect data
+        try:
+            time.sleep(10)  # Wait to collect data
 
-# Fetch the latest heart rate and SpO2 data
-data = monitor.get_data()
+            data = monitor.get_data()
 
-# Print the results
-print(f"Heart Rate: {data['heart_rate']} BPM, SpO2: {data['spo2']}")
+            if data and data['heart_rate'] > 0:
+                heart_rate = data['heart_rate']
+                print(f"Heart Rate: {heart_rate} BPM, SpO2: {data['spo2']}")
+                return str(heart_rate)
+            else:
+                print("No valid heart rate detected.")
+                return None
+        except KeyboardInterrupt:
+            print("Interrupted.")
+            return None
+        finally:
+            monitor.stop_sensor()
 
-# Stop the sensor when done
-monitor.stop_sensor()
+    sensor_heart()

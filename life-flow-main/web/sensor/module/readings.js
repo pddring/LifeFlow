@@ -4,6 +4,20 @@
 //
 // =============================
 
+
+
+
+
+
+
+
+
+
+
+//THIS SCRIPT IS NOT REFERENCED OR USED
+
+/*
+
 let hub_id; // Declare a variable for hub_id
 
 // Fetch the hub_id from eel asynchronously
@@ -11,6 +25,7 @@ eel.readData("hub")(function (data) {
     hub_id = data; // Set the hub_id once the data is fetched
     console.log('Hub ID:', hub_id); // Optional: log it to make sure it's correct
 });
+
 
 // Function to generate random values within a range
 function getRandomValue(min, max, decimals = 0) {
@@ -79,3 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
+
+*/

@@ -109,6 +109,7 @@ class HeartRateMonitor:
         self.spo2 = 0
 
     def get_data(self):
+        print("get_data (heartrate_monitor) dunrcion called")
         """
         Returns the latest smoothed and validated BPM and SpO2 values.
         """

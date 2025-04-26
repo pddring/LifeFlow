@@ -4,22 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../global/global.css">
-
   <script src="../../global/fade/fade.js"></script>
-
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="/eel.js"></script>
+  <script src="../script.js"></script>
   <script type="text/javascript" src="../../events.js"></script>
   <title>Life Flow</title>
-
   <style>
-    /* Change Colour Scheme For Individual Sensor*/
+    /* Change Colour Scheme For Individual Sensor */
     :root {
-      --content-color: #629ce2;
+      --content-color: #e26262;
     }
-    
   </style>
-
 </head>
 <body>
   <div class="bar">
@@ -27,47 +23,61 @@
     <div class="time"><p id="clock">16:52</p><script src="../../../../../../global/clock.js"></script></div>
     <span class="material-symbols-rounded wifi">
       wifi
-      </span>
+    </span>
   </div>
   <div class="wave-container"></div>
   <div class="wrapper">
     <br><h1 id="message" class="re fade-in-out">Blood Oxygen</h1>
-      <div class="content">
-        <br>
-        <div class="loader">
-          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-        </div>
-        <p class="sensor-info">-- 50 --</p>
-        <p class="sensor-unit">SpO₂%</p>
-        <br><br><br>
-        <p>Currently measuring live blood oxygen levels</p>
-        <br>
-        <hr>
-        <br>
-        <div class="btnBlock">
-          <input class="btn re"  type="submit" onclick="transitionToPage('../index.html');" value="Done">
-        </div>
-
+    <div class="content">
+      <br>
+      <div class="loader">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
       </div>
+      <p class="sensor-info">--</p>
+      <p class="sensor-unit">SpO₂%</p>
+      <br><br><br>
+      <p class="sensor-desc">Please keep your finger on the module.</p>
+      <br>
+      <hr>
+      <br>
+      <div class="btnBlock">
+        <input class="btn re" type="submit" onclick="transitionToPage('MAX30102.html');" value="Done">
+      </div>
+    </div>
     <p class="copyright">&copy; 2024 Life Flow. All rights reserved.</p>
   </div>
 
-
-  <!-- NARRARATOR -->
   <script>
-    function speakText(element) {
-      if (eel.readData("narrator") == "ON") {
-        const textToSpeak = element.innerText.trim();
-    
-        if ('speechSynthesis' in window) {
-          const utterance = new SpeechSynthesisUtterance(textToSpeak);
-          speechSynthesis.speak(utterance);
+    let hubId = null;
+
+    // Get hub ID
+    eel.readData("hub")((data) => {
+      hubId = data;
+      console.log("Hub ID:", hubId);
+    });
+
+    // Read heart rate and handle UI + send data only if hub ID is ready
+    eel.sensor_spo2()((spo2) => {
+      const info = document.querySelector('.sensor-info');
+      const desc = document.querySelector('.sensor-desc');
+
+      if (spo2) {
+        info.textContent = `-- ${spo2} --`;
+        desc.textContent = "Reading Complete";
+
+        if (hubId) {
+          fetch(`http://localhost/api/vitals.php?hub_id=${hubId}&type=oxygen&value=${spo2}`)
+            .then(res => res.json())
+            .then(data => console.log("Pulse data sent:", data))
+            .catch(err => console.error("Error sending spo2 data:", err));
         } else {
-         alert('Your browser does not support text-to-speech.');
+          console.warn("Hub ID not available. Data not sent.");
         }
+      } else {
+        info.textContent = "Error";
+        desc.textContent = "Failed to read data";
       }
-    }
-    </script>
-    <script src="script.js"></script>
+    });
+  </script>
 </body>
 </html>
