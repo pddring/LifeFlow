@@ -1,5 +1,5 @@
 let remainingTimeElement = document.querySelector("#title"),
-         	 secondsLeft = 5
+         	 secondsLeft = 2
 
 const downloadTimer = setInterval( 
     () => {

@@ -173,6 +173,7 @@ def UI():
         print('Entering fullscreen...')
         time.sleep(0.5)
         pyautogui.hotkey("fn", "f11")
+        #=======++++++============================++++++++++++++++++++++================= MAYBE IT ISNT BEING REFERENCED IN THE CODE BECAUSE IT STARTS ON IDEX.HTML NOW NOT LOAD REDIRECT
 
     # Perform server sync before starting UI
     fetch_and_update_settings("settings.json")
