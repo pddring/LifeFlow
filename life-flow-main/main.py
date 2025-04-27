@@ -44,7 +44,10 @@ def fetch_and_update_settings(file_path):
                     "last_name": hub_data["last_name"],
                     "age": hub_data["age"],
                     "gender": hub_data["gender"],
-                    "room": hub_data["room"]
+                    "room": hub_data["room"],
+                    "emergency_contact_1": hub_data["emergency_contact_1"],
+                    "emergency_contact_2": hub_data["emergency_contact_2"],
+                    "emergency_contact_3": hub_data["emergency_contact_3"]
                 }
                 update_settings(file_path, updated_data)
             else:
